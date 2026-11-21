@@ -1,0 +1,21 @@
+part,request_id,request,mode,success,cost,tool_calls,direct_planner_match,runtime_seconds,error,team_members,cms_ids
+D,0,"Plan a route from (0,0) to (6,6) using A*",offline_parser,True,12.0,5,True,0.02442269999301061,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,1,"Deliver from (0,0) to (0,1) and (6,6) with BFS",offline_parser,True,12.0,5,True,0.04019329999573529,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,2,"Find a route from (6,0) to (0,0) using uniform cost",offline_parser,True,6.0,5,True,0.01637009999831207,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,3,"Use greedy to deliver from (6,0) to (0,1)",offline_parser,True,7.0,5,True,0.015640099998563528,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,4,"Simulate delivery from (0,0) to (6,6) with slip",offline_parser,True,12.0,8,True,0.02900549999321811,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,5,"Execute from (6,0) to (0,0) with slip",offline_parser,True,6.0,8,True,0.02546299999812618,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,6,"Plan from (1,1) to (3,3) with A*",offline_parser,True,4.0,5,True,0.019966499996371567,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,7,"Deliver from (2,0) to (6,6) using BFS",offline_parser,True,10.0,5,True,0.027834000007715076,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,8,"Route from (3,3) to (0,0) using A*",offline_parser,True,6.0,5,True,0.016776900010881945,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,9,"Simulate from (0,6) to (6,0)",offline_parser,True,12.0,8,True,0.029301900009159,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,10,"Plan a route from (6,6) to (0,1) using A*",offline_parser,True,11.0,5,True,0.022884300007717684,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,11,"Deliver from (0,1) to (6,6) with greedy",offline_parser,True,11.0,5,True,0.033206299995072186,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,12,"Find a path from (5,5) to (0,0) using ucs",offline_parser,True,10.0,5,True,0.02842449999297969,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,13,"Execute delivery from (0,0) to (5,6) with slip",offline_parser,True,11.0,8,True,0.030195800005458295,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,14,"Plan from (4,0) to (6,6) using A*",offline_parser,True,8.0,5,True,0.01699410000583157,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,15,"Route from (6,1) to (0,6) with BFS",offline_parser,True,11.0,5,True,0.029793100024107844,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,16,"Simulate delivery from (1,1) to (6,6) with slip",offline_parser,True,10.0,8,True,0.026424699986819178,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,17,"Plan a route from (3,0) to (0,6) using A*",offline_parser,True,9.0,5,True,0.017965000006370246,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,18,"Deliver from (6,5) to (0,0) with A*",offline_parser,True,11.0,5,True,0.018922800023574382,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+D,19,"Find a route from (2,5) to (6,0) using greedy",offline_parser,True,9.0,5,True,0.015492600010475144,,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313

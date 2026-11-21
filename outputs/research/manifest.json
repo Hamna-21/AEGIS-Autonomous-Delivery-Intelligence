@@ -1,0 +1,33 @@
+{
+  "seed": 20261122,
+  "scenarios_per_configuration": 30,
+  "search_configurations": [
+    "baseline",
+    "flood",
+    "one_way",
+    "flood_one_way"
+  ],
+  "rival_configurations": [
+    "deterministic",
+    "stochastic_slip"
+  ],
+  "members": [
+    [
+      "Khansa Farooq",
+      "471827"
+    ],
+    [
+      "Sara Amin",
+      "462417"
+    ],
+    [
+      "Hamna Mushtaq",
+      "486820"
+    ],
+    [
+      "Faiza Malik",
+      "475313"
+    ]
+  ],
+  "generated_at": "2026-11-21T21:37:05Z"
+}

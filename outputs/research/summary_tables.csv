@@ -1,0 +1,13 @@
+table,metric,group,n,mean,ci95_low,ci95_high,team_members,cms_ids
+search_summary,cost,A*,120,13.366666666666667,12.631713944875685,14.10161938845765,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+search_summary,cost,BFS,120,21.841666666666665,20.658233594371783,23.025099738961547,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+search_summary,cost,DLS,120,59.53333333333333,55.411811982137145,63.65485468452952,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+search_summary,cost,Greedy,120,21.841666666666665,20.658233594371783,23.025099738961547,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+search_summary,cost,IDS,120,21.841666666666665,20.658233594371783,23.025099738961547,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+search_summary,cost,UCS,120,13.366666666666667,12.631713944875685,14.10161938845765,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+rival_summary,win,all configurations,360,0.4222222222222222,0.3711294099743842,0.47331503447006024,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+rival_summary,draw,all configurations,360,0.2111111111111111,0.1688955746549935,0.2533266475672287,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+rival_summary,loss,all configurations,360,0.36666666666666664,0.31681717484031907,0.4165161584930142,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+llm_summary,success_rate,offline_parser,20,1.0,1.0,1.0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+ablation_summary,nodes_expanded,A*_default_heuristic,30,43.7,32.05009890624591,55.3499010937541,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+ablation_summary,nodes_expanded,A*_heuristic_ablated,30,82.93333333333334,68.71238521894833,97.15428144771835,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
