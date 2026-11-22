@@ -1,0 +1,70 @@
+{
+  "seed": 110228657731057,
+  "instance_id": "64409bfc",
+  "instance": {
+    "instance_id": "64409bfc",
+    "grid_size": 38,
+    "terrain_cost": {
+      "road": 1,
+      "grass": 3,
+      "mud": 7,
+      "ford": 8
+    },
+    "obstacle_density": 0.285,
+    "start": [
+      26,
+      3
+    ],
+    "delivery_stops": [
+      [
+        25,
+        9
+      ],
+      [
+        31,
+        9
+      ],
+      [
+        1,
+        23
+      ]
+    ],
+    "adversary": "chaser",
+    "slip_probability": 0.11,
+    "adversary_search_depth": 6,
+    "twists": [
+      "fog_partial_observability",
+      "one_way_streets"
+    ]
+  },
+  "scenarios_per_configuration": 30,
+  "search_configurations": [
+    "baseline",
+    "flood",
+    "one_way",
+    "flood_one_way"
+  ],
+  "rival_configurations": [
+    "deterministic",
+    "stochastic_slip"
+  ],
+  "members": [
+    [
+      "Khansa Farooq",
+      "471827"
+    ],
+    [
+      "Sara Amin",
+      "462417"
+    ],
+    [
+      "Hamna Mushtaq",
+      "486820"
+    ],
+    [
+      "Faiza Malik",
+      "475313"
+    ]
+  ],
+  "generated_at": "2026-11-22T09:30:30Z"
+}

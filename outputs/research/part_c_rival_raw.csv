@@ -1,361 +1,361 @@
-part,configuration,scenario,seed,depth,algorithm,value,selected_move,nodes,cutoffs,pruning_percent,outcome,replans,team_members,cms_ids
-C,deterministic,0,20311122,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,0,20311122,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,0,20311122,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,0,20311122,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,0,20311122,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,0,20311122,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,1,20311123,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,2,20311124,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,3,20311125,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,4,20311126,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,5,20311127,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,6,20311128,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,7,20311129,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,8,20311130,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,9,20311131,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,10,20311132,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,11,20311133,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,12,20311134,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,13,20311135,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,14,20311136,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,15,20311137,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,16,20311138,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,17,20311139,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,18,20311140,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,19,20311141,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,20,20311142,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,21,20311143,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,22,20311144,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,23,20311145,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,24,20311146,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,25,20311147,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,26,20311148,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,27,20311149,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,28,20311150,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,deterministic,29,20311151,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,0,20311122,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,2,Minimax,7.0,up,42,0,,draw,4,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,2,Alpha-Beta,7.0,up,42,0,0.0,draw,4,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,1,20311123,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,2,20311124,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,2,Minimax,7.0,up,42,0,,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,2,Alpha-Beta,7.0,up,42,0,0.0,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,3,20311125,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,4,20311126,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,4,Minimax,1.0,up,2088,0,,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,5,20311127,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,2,Minimax,5.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,2,Alpha-Beta,5.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,3,Minimax,2.0,up,482,0,,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,6,20311128,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,2,Minimax,7.0,up,42,0,,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,2,Alpha-Beta,7.0,up,42,0,0.0,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,7,20311129,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,8,20311130,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,9,20311131,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,10,20311132,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,11,20311133,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,2,Minimax,5.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,2,Alpha-Beta,5.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,4,Minimax,0.0,right,2088,0,,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,12,20311134,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,3,Minimax,-1000.0,up,726,0,,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,13,20311135,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,2,Minimax,-1000.0,up,67,0,,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,14,20311136,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,15,20311137,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,16,20311138,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,4,Minimax,1.0,up,2088,0,,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,17,20311139,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,18,20311140,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,19,20311141,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,20,20311142,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,21,20311143,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,4,Minimax,-1000.0,up,3076,0,,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,22,20311144,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,23,20311145,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,2,Minimax,-1000.0,up,67,0,,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,24,20311146,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,25,20311147,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,26,20311148,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,3,Minimax,4.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,27,20311149,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,2,Minimax,5.0,up,42,0,,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,2,Alpha-Beta,5.0,up,42,0,0.0,draw,3,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,28,20311150,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
-C,stochastic_slip,29,20311151,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq | Sara Amin | Hamna Mushtaq | Faiza Malik,471827 | 462417 | 486820 | 475313
+part,configuration,scenario,seed,depth,algorithm,value,selected_move,nodes,cutoffs,pruning_percent,outcome,replans,team_members,cms_ids,instance_id
+C,deterministic,0,110228657781057,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,0,110228657781057,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,0,110228657781057,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,0,110228657781057,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,0,110228657781057,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,0,110228657781057,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,1,110228657781058,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,2,110228657781059,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,3,110228657781060,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,4,110228657781061,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,5,110228657781062,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,6,110228657781063,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,7,110228657781064,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,8,110228657781065,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,9,110228657781066,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,10,110228657781067,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,11,110228657781068,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,12,110228657781069,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,13,110228657781070,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,14,110228657781071,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,15,110228657781072,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,16,110228657781073,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,17,110228657781074,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,18,110228657781075,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,19,110228657781076,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,20,110228657781077,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,21,110228657781078,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,22,110228657781079,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,23,110228657781080,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,24,110228657781081,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,25,110228657781082,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,26,110228657781083,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,27,110228657781084,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,2,Minimax,7.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,2,Alpha-Beta,7.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,28,110228657781085,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,deterministic,29,110228657781086,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,2,Minimax,7.0,up,42,0,,draw,4,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,2,Alpha-Beta,7.0,up,42,0,0.0,draw,4,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,0,110228657781057,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,1,110228657781058,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,2,110228657781059,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,3,110228657781060,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,2,Minimax,7.0,up,42,0,,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,2,Alpha-Beta,7.0,up,42,0,0.0,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,4,110228657781061,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,5,110228657781062,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,6,110228657781063,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,4,Minimax,0.0,right,2088,0,,win,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,7,110228657781064,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,8,110228657781065,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,9,110228657781066,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,2,Minimax,7.0,up,42,0,,draw,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,2,Alpha-Beta,7.0,up,42,0,0.0,draw,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,10,110228657781067,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,2,Minimax,5.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,2,Alpha-Beta,5.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,11,110228657781068,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,12,110228657781069,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,13,110228657781070,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,14,110228657781071,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,2,Minimax,5.0,up,42,0,,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,2,Alpha-Beta,5.0,up,42,0,0.0,draw,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,15,110228657781072,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,4,Minimax,1.0,up,2088,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,16,110228657781073,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,2,Minimax,5.0,up,42,0,,draw,4,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,2,Alpha-Beta,5.0,up,42,0,0.0,draw,4,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,17,110228657781074,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,2,Minimax,7.0,up,42,0,,draw,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,2,Alpha-Beta,7.0,up,42,0,0.0,draw,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,18,110228657781075,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,4,Minimax,0.0,right,2088,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,19,110228657781076,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,20,110228657781077,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,2,Minimax,5.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,2,Alpha-Beta,5.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,3,Minimax,2.0,up,482,0,,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,21,110228657781078,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,22,110228657781079,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,3,Alpha-Beta,-1000.0,up,418,33,42.42424242424242,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,23,110228657781080,4,Alpha-Beta,-1000.0,up,1025,71,66.67750325097529,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,2,Minimax,-1000.0,up,67,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,2,Alpha-Beta,-1000.0,up,67,0,0.0,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,3,Minimax,-1000.0,up,726,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,3,Alpha-Beta,-1000.0,up,422,32,41.8732782369146,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,4,Minimax,-1000.0,up,3076,0,,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,24,110228657781081,4,Alpha-Beta,-1000.0,up,1122,72,63.52405721716515,loss,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,4,Minimax,0.0,right,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,25,110228657781082,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,3,Minimax,4.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,26,110228657781083,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,2,Minimax,5.0,up,42,0,,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,2,Alpha-Beta,5.0,up,42,0,0.0,draw,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,4,Minimax,0.0,right,2088,0,,win,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,27,110228657781084,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,2,Minimax,7.0,up,42,0,,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,2,Alpha-Beta,7.0,up,42,0,0.0,draw,1,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,3,Minimax,4.0,up,482,0,,win,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,3,Alpha-Beta,4.0,up,309,21,35.892116182572614,win,3,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,4,Minimax,1.0,up,2088,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,28,110228657781085,4,Alpha-Beta,1.0,up,1190,102,43.00766283524904,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,2,Minimax,5.0,up,42,0,,draw,5,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,2,Alpha-Beta,5.0,up,42,0,0.0,draw,5,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,3,Minimax,2.0,up,482,0,,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,3,Alpha-Beta,2.0,up,282,21,41.49377593360996,win,0,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,4,Minimax,0.0,right,2088,0,,win,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc
+C,stochastic_slip,29,110228657781086,4,Alpha-Beta,0.0,right,1112,92,46.74329501915709,win,2,Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313),471827 | 462417 | 486820 | 475313,64409bfc

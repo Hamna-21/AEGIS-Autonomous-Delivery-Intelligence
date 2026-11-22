@@ -7,6 +7,7 @@ figures are generated from those observations.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import random
 import time
@@ -14,7 +15,7 @@ from pathlib import Path
 
 import numpy as np
 
-from common import MEMBERS, stamp
+from config import CMS_IDS, GROUP_STAMP, GRID, INSTANCE, INSTANCE_ID, MEMBERS
 from part_b.search import (DeliveryProblem, a_star, bfs, depth_limited_search,
                            greedy_best_first_search, iterative_deepening_search,
                            uniform_cost_search)
@@ -24,18 +25,34 @@ from part_d.interface import ALGORITHMS, default_grid
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "research"
-SEED = 20261122
+SEED = int(hashlib.sha256("|".join(sorted(CMS_IDS)).encode()).hexdigest()[:12], 16)
 SCENARIOS_PER_CONFIGURATION = 30
-TERRAIN_COST = {"road": 1, "grass": 3, "mud": 7, "ford": 8}
+TERRAIN_COST = INSTANCE["terrain_cost"]
 SEARCH_ALGORITHMS = [("BFS", bfs), ("UCS", uniform_cost_search),
                      ("DLS", lambda p: depth_limited_search(p, 22)),
                      ("IDS", lambda p: iterative_deepening_search(p, 22)),
                      ("Greedy", greedy_best_first_search), ("A*", a_star)]
 
 
+def generated_requests(grid=None):
+    if grid is None:
+        start = tuple(INSTANCE["start"])
+        stops = [tuple(stop) for stop in INSTANCE["delivery_stops"]]
+    else:
+        rows, cols = grid.shape
+        start = (0, 0)
+        stops = [(rows - 1, cols - 1), (0, cols - 1), (rows - 1, 0)]
+    requests = []
+    for index in range(20):
+        selected = stops[:1 + (index % len(stops))]
+        suffix = " simulate with slip" if index % 4 == 3 else ""
+        destinations = " and ".join(f"({row},{col})" for row, col in selected)
+        requests.append(f"Plan a route from ({start[0]},{start[1]}) to {destinations} using A*{suffix}")
+    return requests
+
+
 def team_fields():
-    return {"team_members": " | ".join(name for name, _ in MEMBERS),
-            "cms_ids": " | ".join(cms for _, cms in MEMBERS)}
+    return {"team_members": GROUP_STAMP, "cms_ids": " | ".join(cms for _, cms in MEMBERS), "instance_id": INSTANCE_ID}
 
 
 def ci95(values):
@@ -170,10 +187,13 @@ def run_rival_experiments():
 
 
 def run_llm_experiments():
-    from experiments.part_d_interface import REQUESTS
-    interface = AEGISCommandInterface(grid=default_grid(), log_path=OUT / "part_d_events.jsonl")
+    # The offline command benchmark uses the small validated mock world so the
+    # no-key evaluation remains bounded. Its slip, costs, and identity come
+    # from the canonical instance configuration.
+    benchmark_grid = default_grid()
+    interface = AEGISCommandInterface(grid=benchmark_grid, log_path=OUT / "part_d_events.jsonl")
     rows = []
-    for index, request in enumerate(REQUESTS):
+    for index, request in enumerate(generated_requests(benchmark_grid)):
         began = time.perf_counter(); before = len(interface.events)
         try:
             response = interface.handle(request); result = response["result"]; args = response["parsed"]["args"]
@@ -205,7 +225,7 @@ def svg_bar(path, title, labels, values, ylabel):
     for i, (label, value) in enumerate(zip(labels, values)):
         x = left + i * ((width-left-50) / max(1, len(values))) + 20; h = (value/maximum) * (height-bottom-80); y = height-bottom-h
         parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" height="{h:.1f}" rx="5" fill="#25d9ff"/><text x="{x+bar_width/2:.1f}" y="{y-8:.1f}" text-anchor="middle" fill="#e8f2f8" font-family="Arial" font-size="12">{value:.2f}</text><text x="{x+bar_width/2:.1f}" y="{height-70}" text-anchor="middle" fill="#8aa2b9" font-family="Arial" font-size="12" transform="rotate(-25 {x+bar_width/2:.1f} {height-70})">{label}</text>')
-    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{stamp()}</text></svg>')
+    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text></svg>')
     path.write_text("".join(parts), encoding="utf-8")
 
 
@@ -220,7 +240,7 @@ def svg_grouped(path, title, groups, series, ylabel):
             parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width-4:.1f}" height="{h:.1f}" fill="{colors[si%len(colors)]}"/><text x="{x+bar_width/2:.1f}" y="{height-70}" text-anchor="middle" fill="#8aa2b9" font-family="Arial" font-size="12">{label}</text>')
     for si, name in enumerate(series):
         x = width-250+si*100; parts.append(f'<rect x="{x}" y="68" width="12" height="12" fill="{colors[si%len(colors)]}"/><text x="{x+18}" y="79" fill="#e8f2f8" font-family="Arial" font-size="12">{name}</text>')
-    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{stamp()}</text></svg>'); path.write_text("".join(parts), encoding="utf-8")
+    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text></svg>'); path.write_text("".join(parts), encoding="utf-8")
 
 
 def summarize(search_rows, rival_rows, llm_rows, ablation_rows):
@@ -252,9 +272,9 @@ def make_figures(search_rows, rival_rows, ablation_rows):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    manifest = {"seed": SEED, "scenarios_per_configuration": SCENARIOS_PER_CONFIGURATION, "search_configurations": ["baseline", "flood", "one_way", "flood_one_way"], "rival_configurations": ["deterministic", "stochastic_slip"], "members": MEMBERS, "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+    manifest = {"seed": SEED, "instance_id": INSTANCE_ID, "instance": INSTANCE, "scenarios_per_configuration": SCENARIOS_PER_CONFIGURATION, "search_configurations": ["baseline", "flood", "one_way", "flood_one_way"], "rival_configurations": ["deterministic", "stochastic_slip"], "members": MEMBERS, "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    print(stamp()); print("Running Part B search experiments..."); search_rows = run_search_experiments(); print(f"  raw rows: {len(search_rows)}")
+    print(GROUP_STAMP); print(f"instance_id: {INSTANCE_ID}"); print("Running Part B search experiments..."); search_rows = run_search_experiments(); print(f"  raw rows: {len(search_rows)}")
     print("Running Part C rival experiments..."); rival_rows = run_rival_experiments(); print(f"  raw rows: {len(rival_rows)}")
     print("Running Part D request evaluation..."); llm_rows = run_llm_experiments(); print(f"  requests: {len(llm_rows)}")
     print("Running A* heuristic ablation..."); ablation_rows = run_ablation(); print(f"  raw rows: {len(ablation_rows)}")
