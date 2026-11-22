@@ -17,6 +17,7 @@ import numpy as np
 from world.flood import advance_flood
 from world.grid import TERRAIN_NAMES
 from world.transitions import legal_neighbors
+from world.fog import visible_mask
 
 Cell = tuple[int, int]
 
@@ -27,6 +28,7 @@ class SearchState:
     delivered: frozenset[int]
     time: int
     flooded: frozenset[Cell]
+    known_cells: frozenset[Cell] = frozenset()
 
 
 @dataclass
@@ -45,7 +47,8 @@ class SearchResult:
 class DeliveryProblem:
     def __init__(self, grid, start, delivery_stops, terrain_cost,
                  allowed_edges=None, flooded_cells=(), flood_interval=5,
-                 flood_enabled=False):
+                 flood_enabled=False, fog_enabled=False, fog_radius=4,
+                 deadlines=None, late_penalty=10.0):
         self.grid = np.asarray(grid, dtype=int)
         self.start = tuple(start)
         self.stops = tuple(tuple(x) for x in delivery_stops)
@@ -53,6 +56,10 @@ class DeliveryProblem:
         self.allowed_edges = allowed_edges
         self.flood_interval = flood_interval
         self.flood_enabled = flood_enabled
+        self.fog_enabled = bool(fog_enabled)
+        self.fog_radius = int(fog_radius)
+        self.deadlines = tuple(deadlines or ())
+        self.late_penalty = float(late_penalty)
         self.initial_flooded = frozenset(tuple(x) for x in flooded_cells)
         if not self._passable(self.start):
             raise ValueError("start must be passable")
@@ -60,7 +67,8 @@ class DeliveryProblem:
     def initial_state(self):
         delivered = frozenset(i for i, cell in enumerate(self.stops)
                               if cell == self.start)
-        return SearchState(self.start, delivered, 0, self.initial_flooded)
+        known = frozenset(map(tuple, np.argwhere(visible_mask(self.grid.shape, self.start, self.fog_radius)))) if self.fog_enabled else frozenset()
+        return SearchState(self.start, delivered, 0, self.initial_flooded, known)
 
     def is_goal(self, state):
         return len(state.delivered) == len(self.stops)
@@ -77,13 +85,22 @@ class DeliveryProblem:
                 self.flood_enabled)
             if new_grid[nxt] < 0:
                 continue
+            terrain = TERRAIN_NAMES[int(new_grid[nxt])]
             delivered = set(state.delivered)
+            delivery_cost = float(self.terrain_cost[terrain])
+            was_known = (not self.fog_enabled) or nxt in state.known_cells
             for i, stop in enumerate(self.stops):
                 if stop == nxt:
                     delivered.add(i)
-            terrain = TERRAIN_NAMES[int(new_grid[nxt])]
+                    if i < len(self.deadlines) and new_time > self.deadlines[i]:
+                        delivery_cost += self.late_penalty
+            known = state.known_cells
+            if self.fog_enabled:
+                known = known | frozenset(map(tuple, np.argwhere(visible_mask(self.grid.shape, nxt, self.fog_radius))))
+                if not was_known:
+                    delivery_cost = min(float(v) for v in self.terrain_cost.values())
             yield SearchState(nxt, frozenset(delivered), new_time,
-                              frozenset(new_flooded)), float(self.terrain_cost[terrain])
+                              frozenset(new_flooded), frozenset(known)), delivery_cost
 
     def heuristic(self, state, inadmissible=False):
         remaining = [self.stops[i] for i in range(len(self.stops))

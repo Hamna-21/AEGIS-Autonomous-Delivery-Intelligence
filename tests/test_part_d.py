@@ -44,12 +44,12 @@ class PartDTests(unittest.TestCase):
         self.assertTrue(plan["ok"])
         simulation = self.interface.simulate([0, 0], [[6, 6]], slip_probability=1.0, seed=2)
         self.assertTrue(simulation["replanned"])
-        flood = self.interface.spread_flood(flooded_cells=[[0, 0]])
-        self.assertTrue(flood["ok"])
+        fog = self.interface.observe_fog([0, 0], radius=1)
+        self.assertTrue(fog["ok"])
         names = [event.name for event in self.interface.events]
         self.assertIn("plan_route.search", names)
         self.assertIn("simulate.execution", names)
-        self.assertIn("spread_flood.result", names)
+        self.assertIn("observe_fog.result", names)
 
     def test_no_key_does_not_fake_an_llm_result(self):
         if os.getenv("GOOGLE_API_KEY"):

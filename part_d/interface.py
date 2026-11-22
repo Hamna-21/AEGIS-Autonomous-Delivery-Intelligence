@@ -11,13 +11,13 @@ from pathlib import Path
 
 import numpy as np
 
-from config import GEMINI_CACHE_DIR, GEMINI_FALLBACK_MODELS, INSTANCE_ID
+from config import GEMINI_CACHE_DIR, GEMINI_FALLBACK_MODELS, GROUP_STAMP, INSTANCE_ID
 from part_b.search import DeliveryProblem, a_star, bfs, greedy_best_first_search, uniform_cost_search
-from world.flood import spread_flood
+from world.fog import observe
 
 ALGORITHMS = {"bfs": bfs, "ucs": uniform_cost_search, "uniform cost": uniform_cost_search,
               "a*": a_star, "astar": a_star, "greedy": greedy_best_first_search}
-TOOLS = {"plan_route", "simulate", "spread_flood"}
+TOOLS = {"plan_route", "simulate", "observe_fog"}
 
 
 @dataclass
@@ -89,6 +89,9 @@ class AEGISCommandInterface:
         return "429" in text or "resource_exhausted" in text or "quota" in text or "rate limit" in text
 
     def _event(self, phase, name, arguments, observation):
+        observation = dict(observation or {})
+        observation.setdefault("stamp", GROUP_STAMP)
+        observation.setdefault("instance_id", INSTANCE_ID)
         event = Event(datetime.now(timezone.utc).isoformat(), phase, name,
                       self._jsonable(arguments), self._jsonable(observation))
         self.events.append(event)
@@ -152,18 +155,17 @@ class AEGISCommandInterface:
         self._event("Act", "plan_route.result", args, observation)
         return {"ok": True, "mode": self.mode, "algorithm": result.algorithm, **observation}
 
-    def spread_flood(self, grid=None, flooded_cells=None):
-        raw_grid = self.grid if grid is None else np.asarray(grid, dtype=int)
-        flooded_cells = flooded_cells or []
-        args = {"flooded_cells": flooded_cells, "grid_shape": list(raw_grid.shape)}
-        self._event("Sense", "spread_flood.request", args, {"instance_id": INSTANCE_ID})
-        if raw_grid.ndim != 2 or raw_grid.shape[0] != raw_grid.shape[1]:
-            raise ValidationError("grid must be a square matrix")
-        cells = [self._cell(cell, "flooded cell") for cell in flooded_cells]
-        changed, result_cells = spread_flood(raw_grid, set(cells))
-        observation = {"ok": True, "flooded_cells": sorted(result_cells),
-                       "grid": changed.tolist(), "instance_id": INSTANCE_ID}
-        self._event("Act", "spread_flood.result", args, observation)
+    def observe_fog(self, position, radius=4):
+        position = self._cell(position, "position")
+        if not isinstance(radius, int) or radius < 0:
+            raise ValidationError("radius must be a non-negative integer")
+        args = {"position": position, "radius": radius}
+        self._event("Sense", "observe_fog.request", args, {"instance_id": INSTANCE_ID})
+        observed, mask = observe(self.grid, position, radius)
+        observation = {"ok": True, "position": position, "radius": radius,
+                       "visible_cells": int(mask.sum()), "grid": observed.tolist(),
+                       "instance_id": INSTANCE_ID}
+        self._event("Act", "observe_fog.result", args, observation)
         return observation
 
     def simulate(self, start, stops, slip_probability=0.0, seed=0, algorithm="a*",
@@ -211,11 +213,11 @@ class AEGISCommandInterface:
         from langchain_core.messages import HumanMessage, SystemMessage
         validation_text = "Validate that all requested values are explicit and inside the supplied grid." if validation else "Extract only explicit values. The execution layer will still enforce safety validation."
         system = f"""You are the AEGIS command parser. Return JSON only, with no markdown.
-Use exactly one tool: plan_route, simulate, or spread_flood.
+Use exactly one tool: plan_route, simulate, or observe_fog.
 JSON shape: {{\"tool\": string, \"args\": object}}.
 For plan_route and simulate, args must include start as [row,col], stops as a non-empty list of [row,col], and algorithm from {sorted(ALGORITHMS)}.
 For simulate, optionally include slip_probability between 0 and 1, seed, flooded_cells, flood_enabled, flood_interval.
-For spread_flood, args must include flooded_cells as a list of [row,col].
+For observe_fog, args must include position as [row,col] and may include radius.
 The grid shape is {list(self.grid.shape)}. {validation_text}
 Never invent a result. If the request is missing required values, return {{\"error\": \"missing required values\"}}.
 Instance ID is {INSTANCE_ID}."""

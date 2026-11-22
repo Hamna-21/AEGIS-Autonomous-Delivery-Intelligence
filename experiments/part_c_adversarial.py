@@ -4,20 +4,15 @@ import random
 
 from part_c.game import (ReducedDeliveryGame, alpha_beta, confidence_interval,
                          minimax, render_move_svg)
+from config import GRID, INSTANCE, GROUP_STAMP, INSTANCE_ID
 
 
 def make_game(seed, horizon=14):
     rng = random.Random(seed)
-    passable = {(r, c) for r in range(7) for c in range(7)}
-    # Keep a few deterministic obstacle cells while preserving a connected
-    # open corridor for repeatable experiments.
-    for cell in ((1, 2), (2, 2), (4, 4), (5, 4)):
-        passable.discard(cell)
-    start = (6, 0)
-    # Mix a safe and a pressure scenario so the 30-game report contains
-    # meaningful outcomes instead of an all-draw distribution.
-    rival = (5, 1) if seed % 3 == 0 else (0, 6)
-    targets = ((0, 1),) if seed % 2 else ((0, 0),)
+    passable = {(r, c) for r in range(GRID.shape[0]) for c in range(GRID.shape[1]) if GRID[r, c] >= 0}
+    start = tuple(INSTANCE["start"])
+    rival = sorted(passable, key=lambda cell: abs(cell[0] - start[0]) + abs(cell[1] - start[1]), reverse=True)[seed % 20]
+    targets = (tuple(INSTANCE["delivery_stops"][seed % len(INSTANCE["delivery_stops"])]),)
     return ReducedDeliveryGame(passable, start, rival, targets, horizon)
 
 
@@ -54,17 +49,17 @@ def main():
     root = Path("outputs"); root.mkdir(exist_ok=True)
     game = make_game(0)
     print("depth\tminimax_nodes\talpha_beta_nodes\tpruning_percent\tvalue")
-    for depth in range(2, 7):
+    for depth in range(2, INSTANCE["adversary_search_depth"] + 1):
         mm = minimax(game, depth=depth); ab = alpha_beta(game, depth=depth)
         pruning = 100.0 * (mm.stats.nodes - ab.stats.nodes) / max(1, mm.stats.nodes)
         print(f"{depth}\t{mm.stats.nodes}\t{ab.stats.nodes}\t{pruning:.2f}\t{ab.value:.2f}")
-    render_move_svg(game, game.start_state, alpha_beta(game, depth=6),
+    render_move_svg(game, game.start_state, alpha_beta(game, depth=INSTANCE["adversary_search_depth"]),
                     root / "part_c_candidate_moves.svg")
-    for slip in (0.0, 0.11):
+    for slip in (0.0, INSTANCE["slip_probability"]):
         # Depth 2 keeps the 60-game evaluation reproducible and quick while
-        # the table above still benchmarks every supported depth through 6.
+        # the table above benchmarks every depth supported by the generated instance.
         outcomes = [execute(make_game(i), 2, slip, 1000 + i) for i in range(30)]
-        print(("deterministic" if slip == 0 else "stochastic_slip"), summarize(outcomes))
+        print(GROUP_STAMP, f"instance_id: {INSTANCE_ID}", ("deterministic" if slip == 0 else "stochastic_slip"), summarize(outcomes))
 
 
 if __name__ == "__main__":

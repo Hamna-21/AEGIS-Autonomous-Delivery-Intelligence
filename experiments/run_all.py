@@ -22,7 +22,7 @@ from part_b.search import (DeliveryProblem, a_star, bfs, depth_limited_search,
                            uniform_cost_search)
 from part_c.game import ReducedDeliveryGame, confidence_interval, minimax, alpha_beta
 from part_d import AEGISCommandInterface, ValidationError
-from part_d.interface import ALGORITHMS, default_grid
+from part_d.interface import ALGORITHMS
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "research"
@@ -91,43 +91,34 @@ def generated_grid(rng, size=5, obstacle_probability=0.0):
     return grid
 
 
-def directed_edges(grid):
-    from world.transitions import legal_neighbors
-    edges = set()
-    for row in range(grid.shape[0]):
-        for col in range(grid.shape[1]):
-            cell = (row, col)
-            if grid[cell] < 0:
-                continue
-            for nxt in legal_neighbors(grid, cell):
-                if (row + col) % 3 != 0 or nxt[0] >= row:
-                    edges.add((cell, nxt))
-    return edges
+def directed_edges(grid, start, stops):
+    from world.transitions import directed_edges_from_instance
+    return directed_edges_from_instance(grid, INSTANCE_ID, start, stops)
 
 
 def search_scenario(seed, config):
     rng = random.Random(seed)
-    grid = generated_grid(rng)
-    start = (0, 0); stop = (grid.shape[0] - 1, grid.shape[1] - 1)
-    flooded = set()
-    flood_enabled = config in {"flood", "flood_one_way"}
-    one_way = config in {"one_way", "flood_one_way"}
-    if flood_enabled:
-        flooded.add((rng.randrange(grid.shape[0]), rng.randrange(grid.shape[1])))
-        flooded.discard(start); flooded.discard(stop)
-    return grid, start, [stop], flooded, flood_enabled, one_way
+    grid = GRID.copy()
+    start = tuple(INSTANCE["start"])
+    stops = [tuple(stop) for stop in INSTANCE["delivery_stops"]]
+    shift = rng.randrange(len(stops))
+    stops = stops[shift:] + stops[:shift]
+    fog_enabled = config in {"fog", "fog_one_way"}
+    one_way = config in {"one_way", "fog_one_way"}
+    deadlines = [abs(start[0] - stop[0]) + abs(start[1] - stop[1]) + 8 + (seed % 5) for stop in stops]
+    return grid, start, stops, fog_enabled, one_way, deadlines
 
 
 def run_search_experiments():
     rows = []
-    configurations = ["baseline", "flood", "one_way", "flood_one_way"]
+    configurations = ["baseline", "fog", "one_way", "fog_one_way"]
     for config_index, config in enumerate(configurations):
         for scenario in range(SCENARIOS_PER_CONFIGURATION):
             seed = SEED + config_index * 10000 + scenario
-            grid, start, stops, flooded, flood_enabled, one_way = search_scenario(seed, config)
+            grid, start, stops, fog_enabled, one_way, deadlines = search_scenario(seed, config)
             problem = DeliveryProblem(grid, start, stops, TERRAIN_COST,
-                                     allowed_edges=directed_edges(grid) if one_way else None,
-                                     flooded_cells=flooded, flood_enabled=flood_enabled, flood_interval=5)
+                                     allowed_edges=directed_edges(grid, start, stops) if one_way else None,
+                                     fog_enabled=fog_enabled, deadlines=deadlines)
             for algorithm, solver in SEARCH_ALGORITHMS:
                 began = time.perf_counter(); result = solver(problem)
                 row = {"part": "B", "configuration": config, "scenario": scenario,
@@ -141,13 +132,14 @@ def run_search_experiments():
 
 
 def game_for_seed(seed, horizon=12):
-    rng = random.Random(seed); size = 5
-    passable = {(r, c) for r in range(size) for c in range(size)}
-    for cell in ((1, 2), (2, 2), (3, 3)): passable.discard(cell)
-    start = (size - 1, 0)
-    rival = (0, size - 1) if rng.random() > 0.33 else (size - 2, 1)
-    target = (0, 0) if seed % 2 else (0, 1)
-    return ReducedDeliveryGame(passable, start, rival, [target], horizon=horizon)
+    rng = random.Random(seed)
+    passable = {(r, c) for r in range(GRID.shape[0]) for c in range(GRID.shape[1]) if GRID[r, c] >= 0}
+    start = tuple(INSTANCE["start"])
+    targets = [tuple(stop) for stop in INSTANCE["delivery_stops"]]
+    candidates = sorted(passable, key=lambda cell: abs(cell[0] - start[0]) + abs(cell[1] - start[1]), reverse=True)
+    rival = candidates[seed % min(len(candidates), 20)]
+    targets = targets[rng.randrange(len(targets)):] + targets[:rng.randrange(len(targets))]
+    return ReducedDeliveryGame(passable, start, rival, targets[:1], horizon=horizon)
 
 
 def execute_game(game, depth, slip_probability, seed, planner):
@@ -165,7 +157,7 @@ def execute_game(game, depth, slip_probability, seed, planner):
 
 def run_rival_experiments():
     rows = []
-    for config, slip in [("deterministic", 0.0), ("stochastic_slip", 0.11)]:
+    for config, slip in [("deterministic", 0.0), ("stochastic_slip", INSTANCE["slip_probability"])]:
         for scenario in range(SCENARIOS_PER_CONFIGURATION):
             seed = SEED + 50000 + scenario; game = game_for_seed(seed)
             for depth in (2, 3, 4):
@@ -193,7 +185,7 @@ def run_llm_experiments():
         for name in ("part_d_llm_raw.csv", "part_d_events.jsonl", "trace_1.txt", "trace_2.txt"):
             (OUT / name).unlink(missing_ok=True)
         return []
-    benchmark_grid = default_grid()
+    benchmark_grid = GRID
     interface = AEGISCommandInterface(grid=benchmark_grid, log_path=OUT / "part_d_events.jsonl")
     rows = []
     for index, request in enumerate(generated_requests(benchmark_grid)):
@@ -233,8 +225,8 @@ def run_llm_experiments():
 def run_ablation():
     rows = []
     for scenario in range(SCENARIOS_PER_CONFIGURATION):
-        seed = SEED + 90000 + scenario; grid, start, stops, flooded, flood_enabled, one_way = search_scenario(seed, "baseline")
-        problem = DeliveryProblem(grid, start, stops, TERRAIN_COST, flooded_cells=flooded, flood_enabled=flood_enabled, allowed_edges=directed_edges(grid) if one_way else None)
+        seed = SEED + 90000 + scenario; grid, start, stops, fog_enabled, one_way, deadlines = search_scenario(seed, "baseline")
+        problem = DeliveryProblem(grid, start, stops, TERRAIN_COST, fog_enabled=fog_enabled, deadlines=deadlines, allowed_edges=directed_edges(grid, start, stops) if one_way else None)
         for label, result in (("A*_default_heuristic", a_star(problem)), ("A*_heuristic_ablated", uniform_cost_search(problem))):
             row = {"part": "Ablation", "study": "remove heuristic by replacing h with 0", "scenario": scenario, "seed": seed, "variant": label, "found": result.found, "cost": result.cost if result.found else "", "nodes_expanded": result.nodes_expanded, "runtime_seconds": result.runtime_seconds}
             row.update(team_fields()); rows.append(row)
@@ -247,7 +239,7 @@ def svg_bar(path, title, labels, values, ylabel):
     for i, (label, value) in enumerate(zip(labels, values)):
         x = left + i * ((width-left-50) / max(1, len(values))) + 20; h = (value/maximum) * (height-bottom-80); y = height-bottom-h
         parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" height="{h:.1f}" rx="5" fill="#25d9ff"/><text x="{x+bar_width/2:.1f}" y="{y-8:.1f}" text-anchor="middle" fill="#e8f2f8" font-family="Arial" font-size="12">{value:.2f}</text><text x="{x+bar_width/2:.1f}" y="{height-70}" text-anchor="middle" fill="#8aa2b9" font-family="Arial" font-size="12" transform="rotate(-25 {x+bar_width/2:.1f} {height-70})">{label}</text>')
-    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text></svg>')
+    parts.append(f'<text x="{width-20}" y="{height-35}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text><text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">instance_id: {INSTANCE_ID}</text></svg>')
     path.write_text("".join(parts), encoding="utf-8")
 
 
@@ -262,7 +254,7 @@ def svg_grouped(path, title, groups, series, ylabel):
             parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width-4:.1f}" height="{h:.1f}" fill="{colors[si%len(colors)]}"/><text x="{x+bar_width/2:.1f}" y="{height-70}" text-anchor="middle" fill="#8aa2b9" font-family="Arial" font-size="12">{label}</text>')
     for si, name in enumerate(series):
         x = width-250+si*100; parts.append(f'<rect x="{x}" y="68" width="12" height="12" fill="{colors[si%len(colors)]}"/><text x="{x+18}" y="79" fill="#e8f2f8" font-family="Arial" font-size="12">{name}</text>')
-    parts.append(f'<text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text></svg>'); path.write_text("".join(parts), encoding="utf-8")
+    parts.append(f'<text x="{width-20}" y="{height-35}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">{GROUP_STAMP}</text><text x="{width-20}" y="{height-20}" text-anchor="end" fill="#8aa2b9" font-family="Arial" font-size="11">instance_id: {INSTANCE_ID}</text></svg>'); path.write_text("".join(parts), encoding="utf-8")
 
 
 def summarize(search_rows, rival_rows, llm_rows, ablation_rows):
@@ -295,7 +287,7 @@ def make_figures(search_rows, rival_rows, ablation_rows):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    manifest = {"seed": SEED, "instance_id": INSTANCE_ID, "instance": INSTANCE, "scenarios_per_configuration": SCENARIOS_PER_CONFIGURATION, "search_configurations": ["baseline", "flood", "one_way", "flood_one_way"], "rival_configurations": ["deterministic", "stochastic_slip"], "members": MEMBERS, "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+    manifest = {"seed": SEED, "stamp": GROUP_STAMP, "instance_id": INSTANCE_ID, "instance": INSTANCE, "scenarios_per_configuration": SCENARIOS_PER_CONFIGURATION, "search_configurations": ["baseline", "fog", "one_way", "fog_one_way"], "rival_configurations": ["deterministic", "stochastic_slip"], "members": MEMBERS, "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(GROUP_STAMP); print(f"instance_id: {INSTANCE_ID}"); print("Running Part B search experiments..."); search_rows = run_search_experiments(); print(f"  raw rows: {len(search_rows)}")
     print("Running Part C rival experiments..."); rival_rows = run_rival_experiments(); print(f"  raw rows: {len(rival_rows)}")

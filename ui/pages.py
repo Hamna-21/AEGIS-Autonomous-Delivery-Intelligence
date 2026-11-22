@@ -33,7 +33,7 @@ def assistant(ctx):
         st.session_state.interface = AEGISCommandInterface(grid=ctx.grid, log_path=ROOT / "outputs" / "ui_part_d_events.jsonl")
     interface = st.session_state.interface
     st.info(f"Mode: {interface.mode}. Set GOOGLE_API_KEY to enable Gemini natural-language commands.")
-    command = st.text_area("Command", "Plan a route from (0,0) to (6,6) using A*")
+    command = st.text_area("Command", f"Plan a route from {tuple(ctx.start)} to {tuple(ctx.stops[0])} using A*")
     if st.button("Execute", type="primary"):
         try:
             result = interface.handle(command); st.json(result.get("result", result))
@@ -53,7 +53,7 @@ def algorithm_lab(ctx):
 
 def rival_page(ctx):
     hero("RIVAL INTELLIGENCE", "Adversarial decision theatre", "Inspect Minimax and Alpha-Beta choices in the reduced game.")
-    depth = st.slider("Search depth", 2, 6, int(INSTANCE.get("adversary_search_depth", 6))); engine = st.radio("Engine", ["Alpha-Beta", "Minimax"], horizontal=True)
+    depth_limit = int(INSTANCE.get("adversary_search_depth", 2)); depth = st.slider("Search depth", 2, depth_limit, depth_limit); engine = st.radio("Engine", ["Alpha-Beta", "Minimax"], horizontal=True)
     passable = {tuple(x) for x in np.argwhere(ctx.grid >= 0)}; targets = [s for s in ctx.stops if s in passable] or [(ctx.grid.shape[0]-1, ctx.grid.shape[1]-1)]
     game = ReducedDeliveryGame(passable, ctx.start, ctx.rival, targets, horizon=max(12, depth + 4)); decision = alpha_beta(game, depth=depth) if engine == "Alpha-Beta" else minimax(game, depth=depth)
     cols = st.columns(4); cols[0].metric("Move", str(decision.move)); cols[1].metric("Value", round(decision.value, 2)); cols[2].metric("Nodes", decision.stats.nodes); cols[3].metric("Cutoffs", decision.stats.cutoffs)

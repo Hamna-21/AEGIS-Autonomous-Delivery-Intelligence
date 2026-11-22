@@ -7,6 +7,7 @@ that is not a road. This conservative rule keeps the supplied generator's
 unspecified one-way details configurable instead of inventing them.
 """
 from dataclasses import dataclass
+import hashlib
 from typing import Iterable
 import random
 import numpy as np
@@ -39,6 +40,39 @@ def legal_neighbors(grid, cell, allowed_edges: set[Edge] | None = None):
 
 def is_legal_move(grid, source, target, allowed_edges=None):
     return tuple(target) in legal_neighbors(grid, tuple(source), allowed_edges)
+
+
+def directed_edges_from_instance(grid, instance_id, start=None, stops=()):
+    """Create deterministic directed edges and add simple reachability corridors."""
+    edges = set()
+    seed = str(instance_id).encode()
+    for row in range(grid.shape[0]):
+        for col in range(grid.shape[1]):
+            source = (row, col)
+            if not is_passable(grid, source):
+                continue
+            for target in legal_neighbors(grid, source):
+                digest = hashlib.sha256(seed + f":{row},{col}:{target[0]},{target[1]}".encode()).digest()
+                if digest[0] % 3 != 0:
+                    edges.add((source, target))
+    if start is not None:
+        for stop in stops:
+            frontier = [tuple(start)]
+            parent = {tuple(start): None}
+            while frontier:
+                current = frontier.pop(0)
+                if current == tuple(stop):
+                    break
+                for nxt in legal_neighbors(grid, current):
+                    if nxt not in parent:
+                        parent[nxt] = current
+                        frontier.append(nxt)
+            if tuple(stop) in parent:
+                current = tuple(stop)
+                while parent[current] is not None:
+                    edges.add((parent[current], current))
+                    current = parent[current]
+    return edges
 
 
 @dataclass(frozen=True)
