@@ -58,11 +58,4 @@ python run_all.py
 python -m streamlit run ui/app.py
 ```
 
-The current group is:
 
-```text
-Khansa Farooq (471827)
-Sara Amin (462417)
-Hamna Mushtaq (486820)
-Faiza Malik (475313)
-```
