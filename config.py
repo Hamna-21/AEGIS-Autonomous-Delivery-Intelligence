@@ -14,10 +14,10 @@ INSTANCE_ID = INSTANCE["instance_id"]
 THIRD_TWIST = "parcel deadlines: each parcel expires after a configured step budget and incurs a late-delivery penalty"
 ACTIVE_TWISTS = list(INSTANCE["twists"]) + [THIRD_TWIST]
 GROUP_STAMP = stamp(MEMBERS)
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash")
 GEMINI_FALLBACK_MODELS = [
     GEMINI_MODEL,
-    "gemini-3.8-flash-lite",
+    "gemini-3-flash-lite",
     "gemini-2.5-flash-lite",
 ]
 GEMINI_CACHE_DIR = "outputs/llm_cache"
