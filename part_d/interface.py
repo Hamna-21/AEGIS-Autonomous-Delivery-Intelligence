@@ -176,7 +176,13 @@ For simulate, optionally include slip_probability between 0 and 1, seed, flooded
 For spread_flood, args must include flooded_cells as a list of [row,col].
 The grid shape is {list(self.grid.shape)}. Never invent a result. If the request is missing required values, return {{\"error\": \"missing required values\"}}.
 Instance ID is {INSTANCE_ID}."""
-        response = self.llm.invoke([SystemMessage(content=system), HumanMessage(content=request)])
+        try:
+            response = self.llm.invoke([SystemMessage(content=system), HumanMessage(content=request)])
+        except Exception as exc:
+            raise ValidationError(
+                f"Gemini request failed for model {GEMINI_MODEL}: {exc}. "
+                "Check GOOGLE_API_KEY and the configured model in config.py."
+            ) from exc
         content = response.content
         if isinstance(content, list):
             content = "".join(item.get("text", "") if isinstance(item, dict) else str(item) for item in content)
