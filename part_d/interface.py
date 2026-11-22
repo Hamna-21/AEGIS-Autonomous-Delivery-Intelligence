@@ -228,6 +228,8 @@ Instance ID is {INSTANCE_ID}."""
                 self.last_model = model
                 self.last_cache_hit = True
                 if cached.get("status") == "rate_limited":
+                    cache_path.unlink(missing_ok=True)
+                    self.last_cache_hit = False
                     continue
                 if cached.get("status") != "success":
                     raise ValidationError(cached.get("error", "Cached Gemini request failed"))
@@ -242,12 +244,12 @@ Instance ID is {INSTANCE_ID}."""
                 return self._parse_llm_content(content)
             except Exception as exc:
                 limited = self._rate_limited(exc)
-                self._save_cache(cache_path, {"status": "rate_limited" if limited else "error",
-                                               "model": model, "request": request,
-                                               "validation": bool(validation), "error": str(exc)})
                 if limited:
                     print(f"Gemini model exhausted: {model}. Trying the next configured model.")
                     continue
+                self._save_cache(cache_path, {"status": "error", "model": model,
+                                               "request": request, "validation": bool(validation),
+                                               "error": str(exc)})
                 raise ValidationError(f"Gemini request failed for model {model}: {exc}") from exc
         raise ValidationError("All configured Gemini models are exhausted. Part D stopped without fake results.")
 

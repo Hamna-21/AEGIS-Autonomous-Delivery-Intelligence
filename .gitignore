@@ -3,4 +3,5 @@ __pycache__/
 .pytest_cache/
 .streamlit/
 .env
+outputs/llm_cache/
 outputs/ui_part_d_events.jsonl
