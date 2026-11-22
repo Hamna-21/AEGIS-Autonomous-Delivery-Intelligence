@@ -197,26 +197,36 @@ def run_llm_experiments():
     interface = AEGISCommandInterface(grid=benchmark_grid, log_path=OUT / "part_d_events.jsonl")
     rows = []
     for index, request in enumerate(generated_requests(benchmark_grid)):
-        began = time.perf_counter(); before = len(interface.events)
-        trace_events = []
-        try:
-            response = interface.handle(request); trace_events = response.get("trace", []); result = response["result"]; args = response["parsed"]["args"]
-            direct = ALGORITHMS[args["algorithm"]](interface._problem(args["start"], args["stops"]))
-            reported_cost = result.get("cost", result.get("planned_cost")); error = ""; success = bool(result.get("ok")); direct_match = reported_cost == direct.cost
-        except ValidationError as exc:
-            success = False; direct_match = False; reported_cost = ""; error = str(exc)
-            trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
-        except Exception as exc:
-            success = False; direct_match = False; reported_cost = ""; error = f"provider_error: {exc}"
-            trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
-        if index < 2:
-            lines = [f"stamp: {GROUP_STAMP}", f"instance_id: {INSTANCE_ID}", f"request: {request}"]
-            lines.extend(f"{event['phase']} | {event['name']} | {event.get('observation', {})}" for event in trace_events)
-            (OUT / f"trace_{index + 1}.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
-        row = {"part": "D", "request_id": index, "request": request, "mode": interface.mode,
-               "success": success, "cost": reported_cost, "tool_calls": len(interface.events) - before,
-               "direct_planner_match": direct_match, "runtime_seconds": time.perf_counter() - began, "error": error}
-        row.update(team_fields()); rows.append(row)
+        for validation in (True, False):
+            began = time.perf_counter(); before = len(interface.events)
+            trace_events = []
+            try:
+                response = interface.handle(request, validation=validation)
+                trace_events = response.get("trace", [])
+                result = response["result"]; args = response["parsed"]["args"]
+                direct = ALGORITHMS[args["algorithm"]](interface._problem(args["start"], args["stops"]))
+                reported_cost = result.get("cost", result.get("planned_cost")); error = ""
+                success = bool(result.get("ok")); direct_match = reported_cost == direct.cost
+                model = response.get("model", ""); cache_hit = response.get("cache_hit", False)
+            except ValidationError as exc:
+                success = False; direct_match = False; reported_cost = ""; error = str(exc)
+                model = interface.last_model; cache_hit = interface.last_cache_hit
+                trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
+            except Exception as exc:
+                success = False; direct_match = False; reported_cost = ""; error = f"provider_error: {exc}"
+                model = interface.last_model; cache_hit = interface.last_cache_hit
+                trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
+            print(f"Part D request {index + 1}/20 validation={validation} model={model or 'none'} cache_hit={cache_hit}")
+            if index < 2 and validation:
+                lines = [f"stamp: {GROUP_STAMP}", f"instance_id: {INSTANCE_ID}", f"request: {request}"]
+                lines.extend(f"{event['phase']} | {event['name']} | {event.get('observation', {})}" for event in trace_events)
+                (OUT / f"trace_{index + 1}.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+            row = {"part": "D", "request_id": index, "request": request,
+                   "validation": validation, "mode": interface.mode, "model": model,
+                   "cache_hit": cache_hit, "success": success, "cost": reported_cost,
+                   "tool_calls": len(interface.events) - before, "direct_planner_match": direct_match,
+                   "runtime_seconds": time.perf_counter() - began, "error": error}
+            row.update(team_fields()); rows.append(row)
     write_csv(OUT / "part_d_llm_raw.csv", rows); return rows
 
 

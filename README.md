@@ -57,6 +57,9 @@ python -m streamlit run app.py
 
 Part E is not implemented in this workspace. The configured Gemini model is
 held in `config.py` as `GEMINI_MODEL` and no key is stored in the repository.
+Part D caches responses under `outputs/llm_cache` using the model, request,
+and validation setting. It tries the configured model followed by the fallback
+models in `config.py` when Gemini reports quota exhaustion.
 
 ## Commands
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
+import hashlib
 import json
 import os
 import random
@@ -10,7 +11,7 @@ from pathlib import Path
 
 import numpy as np
 
-from config import GEMINI_MODEL, INSTANCE_ID
+from config import GEMINI_CACHE_DIR, GEMINI_FALLBACK_MODELS, INSTANCE_ID
 from part_b.search import DeliveryProblem, a_star, bfs, greedy_best_first_search, uniform_cost_search
 from world.flood import spread_flood
 
@@ -47,22 +48,45 @@ class AEGISCommandInterface:
     offline parser result can be mistaken for an LLM result.
     """
 
-    def __init__(self, grid=None, terrain_cost=None, log_path=None):
+    def __init__(self, grid=None, terrain_cost=None, log_path=None, cache_dir=None):
         self.grid = np.asarray(grid if grid is not None else default_grid(), dtype=int)
         self.terrain_cost = terrain_cost or {"road": 1, "grass": 3, "mud": 7, "ford": 8}
         self.events = []
         self.log_path = Path(log_path) if log_path else None
         self.api_key_available = bool(os.getenv("GOOGLE_API_KEY"))
         self.mode = "gemini_langchain" if self.api_key_available else "unavailable"
-        self.llm = None
+        self.models = list(dict.fromkeys(GEMINI_FALLBACK_MODELS))
+        self.cache_dir = Path(cache_dir or GEMINI_CACHE_DIR)
+        self.llms = {}
+        self.last_model = ""
+        self.last_cache_hit = False
         if self.api_key_available:
             try:
                 from langchain_google_genai import ChatGoogleGenerativeAI
-                self.llm = ChatGoogleGenerativeAI(model=GEMINI_MODEL, temperature=0,
-                                                  google_api_key=os.environ["GOOGLE_API_KEY"],
-                                                  timeout=30, max_retries=0)
+                self._chat_model_type = ChatGoogleGenerativeAI
             except ImportError as exc:
                 raise ValidationError("Install langchain-google-genai to use Gemini Part D") from exc
+
+    def _cache_path(self, model, request, validation):
+        material = json.dumps({"model": model, "request": request,
+                               "validation": bool(validation)}, sort_keys=True).encode()
+        return self.cache_dir / f"{hashlib.sha256(material).hexdigest()}.json"
+
+    def _llm_for(self, model):
+        if model not in self.llms:
+            self.llms[model] = self._chat_model_type(
+                model=model, temperature=0, google_api_key=os.environ["GOOGLE_API_KEY"],
+                timeout=30, max_retries=0
+            )
+        return self.llms[model]
+
+    def _save_cache(self, path, payload):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload, sort_keys=True), encoding="utf-8")
+
+    def _rate_limited(self, error):
+        text = str(error).lower()
+        return "429" in text or "resource_exhausted" in text or "quota" in text or "rate limit" in text
 
     def _event(self, phase, name, arguments, observation):
         event = Event(datetime.now(timezone.utc).isoformat(), phase, name,
@@ -165,26 +189,7 @@ class AEGISCommandInterface:
         self._event("Act", "simulate.result", args, observation)
         return observation
 
-    def _llm_request(self, request):
-        if self.llm is None:
-            raise ValidationError("GOOGLE_API_KEY is not set; Part D was skipped. Set it before using natural-language commands.")
-        from langchain_core.messages import HumanMessage, SystemMessage
-        system = f"""You are the AEGIS command parser. Return JSON only, with no markdown.
-Use exactly one tool: plan_route, simulate, or spread_flood.
-JSON shape: {{\"tool\": string, \"args\": object}}.
-For plan_route and simulate, args must include start as [row,col], stops as a non-empty list of [row,col], and algorithm from {sorted(ALGORITHMS)}.
-For simulate, optionally include slip_probability between 0 and 1, seed, flooded_cells, flood_enabled, flood_interval.
-For spread_flood, args must include flooded_cells as a list of [row,col].
-The grid shape is {list(self.grid.shape)}. Never invent a result. If the request is missing required values, return {{\"error\": \"missing required values\"}}.
-Instance ID is {INSTANCE_ID}."""
-        try:
-            response = self.llm.invoke([SystemMessage(content=system), HumanMessage(content=request)])
-        except Exception as exc:
-            raise ValidationError(
-                f"Gemini request failed for model {GEMINI_MODEL}: {exc}. "
-                "Check GOOGLE_API_KEY and the configured model in config.py."
-            ) from exc
-        content = response.content
+    def _parse_llm_content(self, content):
         if isinstance(content, list):
             content = "".join(item.get("text", "") if isinstance(item, dict) else str(item) for item in content)
         content = str(content).strip()
@@ -200,15 +205,63 @@ Instance ID is {INSTANCE_ID}."""
             raise ValidationError("Gemini returned an unsupported or malformed tool call")
         return parsed
 
-    def handle(self, request):
+    def _llm_request(self, request, validation=True):
+        if not self.api_key_available:
+            raise ValidationError("GOOGLE_API_KEY is not set; Part D was skipped. Set it before using natural-language commands.")
+        from langchain_core.messages import HumanMessage, SystemMessage
+        validation_text = "Validate that all requested values are explicit and inside the supplied grid." if validation else "Extract only explicit values. The execution layer will still enforce safety validation."
+        system = f"""You are the AEGIS command parser. Return JSON only, with no markdown.
+Use exactly one tool: plan_route, simulate, or spread_flood.
+JSON shape: {{\"tool\": string, \"args\": object}}.
+For plan_route and simulate, args must include start as [row,col], stops as a non-empty list of [row,col], and algorithm from {sorted(ALGORITHMS)}.
+For simulate, optionally include slip_probability between 0 and 1, seed, flooded_cells, flood_enabled, flood_interval.
+For spread_flood, args must include flooded_cells as a list of [row,col].
+The grid shape is {list(self.grid.shape)}. {validation_text}
+Never invent a result. If the request is missing required values, return {{\"error\": \"missing required values\"}}.
+Instance ID is {INSTANCE_ID}."""
+        self.last_model = ""
+        self.last_cache_hit = False
+        for model in self.models:
+            cache_path = self._cache_path(model, request, validation)
+            if cache_path.exists():
+                cached = json.loads(cache_path.read_text(encoding="utf-8"))
+                self.last_model = model
+                self.last_cache_hit = True
+                if cached.get("status") == "rate_limited":
+                    continue
+                if cached.get("status") != "success":
+                    raise ValidationError(cached.get("error", "Cached Gemini request failed"))
+                return self._parse_llm_content(cached["content"])
+            try:
+                response = self._llm_for(model).invoke([SystemMessage(content=system), HumanMessage(content=request)])
+                content = response.content
+                self._save_cache(cache_path, {"status": "success", "model": model,
+                                               "request": request, "validation": bool(validation),
+                                               "content": content})
+                self.last_model = model
+                return self._parse_llm_content(content)
+            except Exception as exc:
+                limited = self._rate_limited(exc)
+                self._save_cache(cache_path, {"status": "rate_limited" if limited else "error",
+                                               "model": model, "request": request,
+                                               "validation": bool(validation), "error": str(exc)})
+                if limited:
+                    print(f"Gemini model exhausted: {model}. Trying the next configured model.")
+                    continue
+                raise ValidationError(f"Gemini request failed for model {model}: {exc}") from exc
+        raise ValidationError("All configured Gemini models are exhausted. Part D stopped without fake results.")
+
+    def handle(self, request, validation=True):
         if not isinstance(request, str) or not request.strip():
             raise ValidationError("request must be non-empty text")
         self._event("Sense", "user.request", {"text": request}, {"mode": self.mode, "instance_id": INSTANCE_ID})
-        parsed = self._llm_request(request)
-        self._event("Reason", "gemini_langchain.tool_call", {"text": request}, parsed)
+        parsed = self._llm_request(request, validation=validation)
+        self._event("Reason", "gemini_langchain.tool_call", {"text": request, "validation": validation,
+                                                               "model": self.last_model, "cache_hit": self.last_cache_hit}, parsed)
         result = getattr(self, parsed["tool"])(**parsed["args"])
         self._event("Act", "gemini_langchain.result", parsed["args"], result)
         return {"mode": self.mode, "request": request, "parsed": parsed, "result": result,
+                "model": self.last_model, "cache_hit": self.last_cache_hit, "validation": validation,
                 "trace": [asdict(event) for event in self.events[-8:]]}
 
     def metrics(self, expected):
