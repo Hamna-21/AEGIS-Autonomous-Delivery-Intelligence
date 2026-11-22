@@ -32,7 +32,7 @@ def assistant(ctx):
     if "interface" not in st.session_state:
         st.session_state.interface = AEGISCommandInterface(grid=ctx.grid, log_path=ROOT / "outputs" / "ui_part_d_events.jsonl")
     interface = st.session_state.interface
-    st.info(f"Mode: {interface.mode} (offline parser, no API key needed)")
+    st.info(f"Mode: {interface.mode}. Set GOOGLE_API_KEY to enable Gemini natural-language commands.")
     command = st.text_area("Command", "Plan a route from (0,0) to (6,6) using A*")
     if st.button("Execute", type="primary"):
         try:

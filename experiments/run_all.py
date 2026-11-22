@@ -9,6 +9,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -187,9 +188,11 @@ def run_rival_experiments():
 
 
 def run_llm_experiments():
-    # The offline command benchmark uses the small validated mock world so the
-    # no-key evaluation remains bounded. Its slip, costs, and identity come
-    # from the canonical instance configuration.
+    if not os.getenv("GOOGLE_API_KEY"):
+        print("Skipping Part D: GOOGLE_API_KEY is not set. No fake or offline LLM results were generated.")
+        for name in ("part_d_llm_raw.csv", "part_d_events.jsonl"):
+            (OUT / name).unlink(missing_ok=True)
+        return []
     benchmark_grid = default_grid()
     interface = AEGISCommandInterface(grid=benchmark_grid, log_path=OUT / "part_d_events.jsonl")
     rows = []
@@ -250,7 +253,8 @@ def summarize(search_rows, rival_rows, llm_rows, ablation_rows):
         lo, hi = ci95(values); row = {"table": "search_summary", "metric": "cost", "group": algorithm, "n": len(values), "mean": sum(values)/len(values) if values else "", "ci95_low": lo, "ci95_high": hi}; row.update(team_fields()); summary_rows.append(row)
     for label in ("win", "draw", "loss"):
         values = [int(row["outcome"] == label) for row in rival_rows]; lo, hi = ci95(values); row = {"table": "rival_summary", "metric": label, "group": "all configurations", "n": len(values), "mean": sum(values)/len(values), "ci95_low": lo, "ci95_high": hi}; row.update(team_fields()); summary_rows.append(row)
-    values = [int(row["success"]) for row in llm_rows]; lo, hi = ci95(values); row = {"table": "llm_summary", "metric": "success_rate", "group": "offline_parser", "n": len(values), "mean": sum(values)/len(values), "ci95_low": lo, "ci95_high": hi}; row.update(team_fields()); summary_rows.append(row)
+    if llm_rows:
+        values = [int(row["success"]) for row in llm_rows]; lo, hi = ci95(values); row = {"table": "llm_summary", "metric": "success_rate", "group": "gemini_langchain", "n": len(values), "mean": sum(values)/len(values), "ci95_low": lo, "ci95_high": hi}; row.update(team_fields()); summary_rows.append(row)
     for variant in ("A*_default_heuristic", "A*_heuristic_ablated"):
         values = [float(row["nodes_expanded"]) for row in ablation_rows if row["variant"] == variant]; lo, hi = ci95(values); row = {"table": "ablation_summary", "metric": "nodes_expanded", "group": variant, "n": len(values), "mean": sum(values)/len(values), "ci95_low": lo, "ci95_high": hi}; row.update(team_fields()); summary_rows.append(row)
     write_csv(OUT / "summary_tables.csv", summary_rows); return summary_rows

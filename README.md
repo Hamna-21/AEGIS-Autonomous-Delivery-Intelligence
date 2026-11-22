@@ -48,14 +48,15 @@ python -m streamlit run app.py
   Search, Greedy Best-First Search, and A* with multi-stop state tracking.
 * Part C: reduced adversarial game, Minimax, Alpha-Beta pruning, move ordering,
   stochastic execution, replanning, and confidence intervals.
-* Part D: validated offline natural-language command tools with event traces.
+* Part D: validated Gemini natural-language command tools through LangChain.
+  Set `GOOGLE_API_KEY` to enable real calls. Without it, `run_all.py` skips
+  Part D and writes no substitute LLM results.
 * UI: Streamlit mission control with seven research and operations pages.
 * Research: reproducible seeded experiments, raw CSV, summary tables, and SVG
   figures through `python run_all.py`.
 
-Part E is not implemented in this workspace. The project does not claim a
-provider-backed LLM. Part D uses an explicitly labelled `offline_parser` mode
-when no API key is configured.
+Part E is not implemented in this workspace. The configured Gemini model is
+held in `config.py` as `GEMINI_MODEL` and no key is stored in the repository.
 
 ## Commands
 

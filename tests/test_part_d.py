@@ -1,4 +1,5 @@
 import json
+import os
 import unittest
 
 from part_d import AEGISCommandInterface, ValidationError
@@ -8,6 +9,7 @@ class PartDTests(unittest.TestCase):
     def setUp(self):
         self.interface = AEGISCommandInterface()
 
+    @unittest.skipUnless(os.getenv("GOOGLE_API_KEY"), "requires GOOGLE_API_KEY and real Gemini calls")
     def test_twenty_natural_language_requests_dispatch(self):
         valid_targets = [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
                          (0, 6), (1, 0), (1, 1), (1, 3), (1, 4)]
@@ -46,10 +48,12 @@ class PartDTests(unittest.TestCase):
         self.assertIn("simulate.execution", names)
         self.assertIn("spread_flood.result", names)
 
-    def test_offline_label_and_json_log(self):
-        response = self.interface.handle("Plan a route from (0,0) to (0,1)")
-        self.assertEqual(response["mode"], "offline_parser")
-        json.dumps(response)
+    def test_no_key_does_not_fake_an_llm_result(self):
+        if os.getenv("GOOGLE_API_KEY"):
+            self.skipTest("no-key behavior is not applicable when GOOGLE_API_KEY is set")
+        with self.assertRaisesRegex(ValidationError, "GOOGLE_API_KEY"):
+            self.interface.handle("Plan a route from (0,0) to (0,1)")
+        json.dumps({"mode": self.interface.mode})
 
 
 if __name__ == "__main__":

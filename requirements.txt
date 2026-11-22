@@ -1,2 +1,4 @@
 numpy>=1.26
 streamlit>=1.40
+langchain-core>=0.3
+langchain-google-genai>=2.0

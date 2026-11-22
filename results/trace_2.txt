@@ -1,9 +1,0 @@
-stamp: Khansa Farooq (471827) | Sara Amin (462417) | Hamna Mushtaq (486820) | Faiza Malik (475313)
-instance_id: 64409bfc
-request: Plan a route from (0,0) to (6,6) and (0,6) using A*
-Act | plan_route.result | {'found': True, 'cost': 12.0, 'path': [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6]], 'nodes_expanded': 45, 'runtime_seconds': 0.003551499976310879}
-Sense | user.request | {'mode': 'offline_parser'}
-Reason | offline_parser.parse | {'tool': 'plan_route', 'args': {'start': [0, 0], 'stops': [[6, 6], [0, 6]], 'algorithm': 'a*'}}
-Sense | plan_route.request | {}
-Reason | plan_route.search | {'found': True, 'cost': 12.0, 'path': [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 6], [2, 6], [3, 6], [4, 6], [5, 6], [6, 6]], 'nodes_expanded': 13, 'runtime_seconds': 0.002190799976233393}
-Act | plan_route.result | {'found': True, 'cost': 12.0, 'path': [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 6], [2, 6], [3, 6], [4, 6], [5, 6], [6, 6]], 'nodes_expanded': 13, 'runtime_seconds': 0.002190799976233393}
