@@ -190,7 +190,7 @@ def run_rival_experiments():
 def run_llm_experiments():
     if not os.getenv("GOOGLE_API_KEY"):
         print("Skipping Part D: GOOGLE_API_KEY is not set. No fake or offline LLM results were generated.")
-        for name in ("part_d_llm_raw.csv", "part_d_events.jsonl"):
+        for name in ("part_d_llm_raw.csv", "part_d_events.jsonl", "trace_1.txt", "trace_2.txt"):
             (OUT / name).unlink(missing_ok=True)
         return []
     benchmark_grid = default_grid()
@@ -198,14 +198,21 @@ def run_llm_experiments():
     rows = []
     for index, request in enumerate(generated_requests(benchmark_grid)):
         began = time.perf_counter(); before = len(interface.events)
+        trace_events = []
         try:
-            response = interface.handle(request); result = response["result"]; args = response["parsed"]["args"]
+            response = interface.handle(request); trace_events = response.get("trace", []); result = response["result"]; args = response["parsed"]["args"]
             direct = ALGORITHMS[args["algorithm"]](interface._problem(args["start"], args["stops"]))
             reported_cost = result.get("cost", result.get("planned_cost")); error = ""; success = bool(result.get("ok")); direct_match = reported_cost == direct.cost
         except ValidationError as exc:
             success = False; direct_match = False; reported_cost = ""; error = str(exc)
+            trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
         except Exception as exc:
             success = False; direct_match = False; reported_cost = ""; error = f"provider_error: {exc}"
+            trace_events = [{"phase": event.phase, "name": event.name, "observation": event.observation} for event in interface.events[-8:]]
+        if index < 2:
+            lines = [f"stamp: {GROUP_STAMP}", f"instance_id: {INSTANCE_ID}", f"request: {request}"]
+            lines.extend(f"{event['phase']} | {event['name']} | {event.get('observation', {})}" for event in trace_events)
+            (OUT / f"trace_{index + 1}.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
         row = {"part": "D", "request_id": index, "request": request, "mode": interface.mode,
                "success": success, "cost": reported_cost, "tool_calls": len(interface.events) - before,
                "direct_planner_match": direct_match, "runtime_seconds": time.perf_counter() - began, "error": error}

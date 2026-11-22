@@ -9,7 +9,10 @@ class PartDTests(unittest.TestCase):
     def setUp(self):
         self.interface = AEGISCommandInterface()
 
-    @unittest.skipUnless(os.getenv("GOOGLE_API_KEY"), "requires GOOGLE_API_KEY and real Gemini calls")
+    @unittest.skipUnless(
+        os.getenv("GOOGLE_API_KEY") and os.getenv("AEGIS_RUN_LIVE_LLM_TESTS") == "1",
+        "requires GOOGLE_API_KEY and explicit AEGIS_RUN_LIVE_LLM_TESTS=1",
+    )
     def test_twenty_natural_language_requests_dispatch(self):
         valid_targets = [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5),
                          (0, 6), (1, 0), (1, 1), (1, 3), (1, 4)]
