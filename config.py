@@ -1,4 +1,8 @@
 """Single instance-driven configuration for the canonical OEL entry points."""
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from common import MEMBERS
 from oel_instance import make_instance, stamp
 

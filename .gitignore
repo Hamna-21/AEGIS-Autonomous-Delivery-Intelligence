@@ -2,4 +2,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .streamlit/
+.env
 outputs/ui_part_d_events.jsonl
