@@ -59,7 +59,8 @@ class AEGISCommandInterface:
             try:
                 from langchain_google_genai import ChatGoogleGenerativeAI
                 self.llm = ChatGoogleGenerativeAI(model=GEMINI_MODEL, temperature=0,
-                                                  google_api_key=os.environ["GOOGLE_API_KEY"])
+                                                  google_api_key=os.environ["GOOGLE_API_KEY"],
+                                                  timeout=30, max_retries=0)
             except ImportError as exc:
                 raise ValidationError("Install langchain-google-genai to use Gemini Part D") from exc
 

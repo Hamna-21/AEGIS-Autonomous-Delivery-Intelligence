@@ -204,6 +204,8 @@ def run_llm_experiments():
             reported_cost = result.get("cost", result.get("planned_cost")); error = ""; success = bool(result.get("ok")); direct_match = reported_cost == direct.cost
         except ValidationError as exc:
             success = False; direct_match = False; reported_cost = ""; error = str(exc)
+        except Exception as exc:
+            success = False; direct_match = False; reported_cost = ""; error = f"provider_error: {exc}"
         row = {"part": "D", "request_id": index, "request": request, "mode": interface.mode,
                "success": success, "cost": reported_cost, "tool_calls": len(interface.events) - before,
                "direct_planner_match": direct_match, "runtime_seconds": time.perf_counter() - began, "error": error}
